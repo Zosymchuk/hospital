@@ -11,10 +11,9 @@ def history(request):
     return render(request, "history/index.html")
 
 
+'''
 def greet(request, name):
-    if name == False:
-        return render(request, "info/index1.html")
-    else:
-        return render(request, "info/index.html", {
-            "name": name.capitalize()
-        })
+    return render(request, "info/greet.html", {
+        "name": name.capitalize()
+    })
+'''
