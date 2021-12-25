@@ -1,9 +1,39 @@
-
 {% extends 'info/layout.html' %}
 
-{% block body %}
-   <h1>Мукачівський військовий госпіталь</h1>
-   <h2>Головна</h2>
 
-   <a href="{% url 'info:history' %}">Історія госпіталю</a>
-{% endblock  %}
+{% block body %}
+<h1>Мукачівський військовий госпіталь</h1>
+<ul>
+   <li><a href="{% url 'info:index' %}">Головна</a></li>
+   <li><a href="{% url 'info:history' %}">Історія госпіталю</a></li>
+   <li><a href="#">Лікарі</a></li>
+   <li><a href="#">Контакти</a></li>
+</ul>
+
+<div class="col-3-4" id="infostr">
+   <div class="col-3-4" id="info1">
+      <div class="col-1-2" id="info2">
+         <p>якесь фото</p>
+         <p>якесь фото</p>
+         <p>якесь фото</p>
+         <p>якесь фото</p>
+         <p>якесь фото</p>
+         <p>якесь фото</p>
+      </div>
+      <div class="col-1-2" id="info2">
+         <p>ще фото</p>
+      </div>
+
+
+      <h1>Інформація</h1>
+      <p>Стаття про те які ми класні</p>
+   </div>
+   <div class="col-1-4">
+      <a href="{% url 'info:history' %}">
+         <h3>історія госпіталю</h3>
+      </a>
+   </div>
+</div>
+
+<a href="{% url 'info:history' %}">Історія госпіталю</a>
+{% endblock %}
