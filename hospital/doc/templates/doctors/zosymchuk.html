@@ -1,0 +1,28 @@
+{% extends 'doctors/layout.html' %}
+
+
+{% block bodydoc %}
+<h1>Зосичук Іван Петрович</h1>
+<ul>
+   <li><a href="{% url 'info:index' %}">Головна</a></li>
+   <li><a href="{% url 'info:history' %}">Історія госпіталю</a></li>
+   <li><a href="{% url 'doc:index' %}">Лікарі</a></li>
+   <li><a href="#">Контакти</a></li>
+</ul>
+
+<div class="col-3-4" id="infostr">
+   <div class="col-3-4" id="info1">
+      <div class="col-1-2" id="info2">
+         <p>якесь фото</p>
+         <p>якесь фото</p>
+         <p>якесь фото</p>
+         <p>якесь фото</p>
+         <p>якесь фото</p>
+         <p>якесь фото</p>
+      </div>
+      <div class="col-1-2" id="info2">
+         <p>ще фото</p>
+      </div>
+
+
+{% endblock %}

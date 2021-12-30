@@ -1,0 +1,12 @@
+{% extends 'info/layout.html' %}
+
+
+{% block body %}
+<h1>Напишіть ваші відгуки</h1>
+<form action="{% url 'info:add' %}" method="post">
+      {% csrf_token %} 
+      {{ form }}
+      <input type="submit">
+   </form>
+   <a href="{% url 'info:index' %}">Головна</a>
+{% endblock %}
