@@ -22,8 +22,11 @@ class doctor(models.Model):
         return f"{self.spec} {self.last_name} {self.name} {self.father}"
 
 
-'''
-class Flight(models.Model):
-    origin = models.CharField(max_length=64)
-    destination = models.CharField(max_length=64)
-    duration = models.IntegerField()'''
+class diseases(models.Model):
+    disease = models.CharField(max_length=100)
+    ICD_10 = models.CharField(max_length=5)
+    specialty = models.ForeignKey(sp, on_delete=models.CASCADE)
+    models.CharField(max_length=50)
+
+    def __str__(self):
+        return f"{self.disease}"

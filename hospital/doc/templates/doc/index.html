@@ -2,17 +2,13 @@
 
 {% block bodydoc %}
    <h1>Лікарі</h1>
-   <ul>
-      <li><a href="{% url 'doc:zosymchuk' %}">Зосимчук Іван Петрович</a></li>
-      <li><a href="{% url 'doc:plis' %}">Пліс Ігор Богданович</a></li>
-      
-      <p><a href="{% url 'info:index' %}">Головна</a></p>
 
+      <p><a href="{% url 'info:index' %}">Головна</a></p>
       <ul>
          <h2>Лікарі</h2>
          <ul>
             {% for doctor in doctor %}
-                <li>{{ doctor.spec }} {{ doctor.name }} {{ doctor.last_name }}</li>
+            <li>{{ doctor.spec }} {{ doctor.name }} {{ doctor.last_name }}</li>
             {% endfor %}
         </ul>
      </ul>

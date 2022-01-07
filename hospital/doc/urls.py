@@ -6,7 +6,7 @@ from . import views
 app_name = "doc"
 urlpatterns = [
     path("", views.index, name="index"),
-    path("zosymchuk", views.zosymchuk, name="zosymchuk"),
-    path("plis", views.plis, name="plis"),
+    path("<int:doctor_id>", views.doctorss, name="doctorss"),
+    #path("zosymchuk", views.zosymchuk, name="zosymchuk"),
+    #path("plis", views.plis, name="plis"),
 ]
-
